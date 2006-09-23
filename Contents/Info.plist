@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>German</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Jeena Colloquy Chat Style</string>
+	<key>CFBundleIdentifier</key>
+	<string>net.jeenaparadies.colloquy.style.frugal</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Frugal</string>
+	<key>CFBundlePackageType</key>
+	<string>coSt</string>
+	<key>JVStyleDescription</key>
+	<string>Frugal grey and black look.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Jeena Paradies</string>
+	<key>JVStyleOptions</key>
+	<array>
+		<dict>
+			<key>style</key>
+			<array>
+				<string>.envelope &gt; .member { width: 10ex !important; } .message { margin-left: 12ex !important; } .event { margin-left: 10ex !important; }</string>
+				<string>.envelope &gt; .member { width: 14ex !important; } .message { margin-left: 16ex !important; } .event { margin-left: 14ex !important; }</string>
+				<string>.envelope &gt; .member { width: 18ex !important; } .message { margin-left: 20ex !important; } .event { margin-left: 18ex !important; }</string>
+				<string>.envelope &gt; .member { width: 22ex !important; } .message { margin-left: 24ex !important; } .event { margin-left: 22ex !important; }</string>
+			</array>
+			<key>default</key>
+			<integer>1</integer>
+			<key>description</key>
+			<string>Nicknamen</string>
+			<key>type</key>
+			<string>Liste</string>
+			<key>options</key>
+			<array>
+				<string>Klein</string>
+				<string>Mittel</string>
+				<string>Groß</string>
+				<string>Extra Groß</string>
+			</array>
+		</dict>
+		<dict>
+			<key>style</key>
+			<string>.envelope &gt; .member.self { color: %@ !important; }</string>
+			<key>default</key>
+			<string>#F00</string>
+			<key>description</key>
+			<string>Dein Name</string>
+			<key>type</key>
+			<string>color</string>
+		</dict>
+		<dict>
+			<key>style</key>
+			<string>.envelope &gt; .member { color: %@ !important; }</string>
+			<key>default</key>
+			<string>#00F</string>
+			<key>description</key>
+			<string>Raum Mitglieder</string>
+			<key>type</key>
+			<string>Farbe</string>
+		</dict>
+		<dict>
+			<key>style</key>
+			<string>.envelope.highlight { background-color: %@ !important; }</string>
+			<key>default</key>
+			<string>#ccd</string>
+			<key>description</key>
+			<string>Nachricht Hervorhebung</string>
+			<key>type</key>
+			<string>Farbe</string>
+		</dict>
+		<dict>
+			<key>style</key>
+			<array>
+				<string>.timestamp { display: block; }</string>
+				<string>.timestamp { display: none; }</string>
+			</array>
+			<key>default</key>
+			<integer>0</integer>
+			<key>description</key>
+			<string>Timestamp</string>
+			<key>type</key>
+			<string>Liste</string>
+			<key>options</key>
+			<array>
+				<string>Sichtbar</string>
+				<string>Unsichtbar</string>
+			</array>
+		</dict>
+		<dict>
+			<key>style</key>
+			<array>
+				<string>.envelope { margin: 0; }</string>
+				<string>.envelope { margin: 2px 0; }</string>
+				<string>.envelope { margin: 3px 0; }</string>
+			</array>
+			<key>default</key>
+			<integer>0</integer>
+			<key>description</key>
+			<string>Zeilenabstand</string>
+			<key>type</key>
+			<string>Liste</string>
+			<key>options</key>
+			<array>
+				<string>Normal</string>
+				<string>Kleine Lücke</string>
+				<string>Große Lücke</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
