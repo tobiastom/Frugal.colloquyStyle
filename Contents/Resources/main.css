@@ -197,4 +197,4 @@ li {
 
 .encoding { display: none; opacity: 0.25; font-size: 0.75em; color:  black; }         
 
-.duplicateTimestamp { visibility: hidden; }
+.duplicateTimestamp { opacity: 0; }
