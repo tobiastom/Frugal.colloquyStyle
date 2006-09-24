@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>German</string>
+	<string>Sweden and Germany</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Jeena Colloquy Chat Style</string>
+	<string>Frugal Colloquy Chat Style</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.jeenaparadies.colloquy.style.frugal</string>
+	<string>net.jeenaparadies.projects.frugal</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
+	<string>0.1.0</string>
 	<key>CFBundleName</key>
 	<string>Frugal</string>
 	<key>CFBundlePackageType</key>
 	<string>coSt</string>
 	<key>JVStyleDescription</key>
-	<string>Frugal grey and black look.</string>
+	<string>see http://jeenaparadies.net/projects/frugal</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Jeena Paradies</string>
+	<string>Jeena Paradies and clynx</string>
 	<key>JVStyleOptions</key>
 	<array>
 		<dict>
@@ -31,15 +31,15 @@
 			<key>default</key>
 			<integer>1</integer>
 			<key>description</key>
-			<string>Nicknamen</string>
+			<string>Nickname column</string>
 			<key>type</key>
-			<string>Liste</string>
+			<string>list</string>
 			<key>options</key>
 			<array>
-				<string>Klein</string>
-				<string>Mittel</string>
-				<string>Groß</string>
-				<string>Extra Groß</string>
+				<string>Small</string>
+				<string>Medium</string>
+				<string>Large</string>
+				<string>Extra Large</string>
 			</array>
 		</dict>
 		<dict>
@@ -48,7 +48,7 @@
 			<key>default</key>
 			<string>#F00</string>
 			<key>description</key>
-			<string>Dein Name</string>
+			<string>Your name</string>
 			<key>type</key>
 			<string>color</string>
 		</dict>
@@ -58,9 +58,9 @@
 			<key>default</key>
 			<string>#00F</string>
 			<key>description</key>
-			<string>Raum Mitglieder</string>
+			<string>Room members</string>
 			<key>type</key>
-			<string>Farbe</string>
+			<string>color</string>
 		</dict>
 		<dict>
 			<key>style</key>
@@ -68,9 +68,9 @@
 			<key>default</key>
 			<string>#ccd</string>
 			<key>description</key>
-			<string>Nachricht Hervorhebung</string>
+			<string>Message highlight</string>
 			<key>type</key>
-			<string>Farbe</string>
+			<string>color</string>
 		</dict>
 		<dict>
 			<key>style</key>
@@ -83,11 +83,11 @@
 			<key>description</key>
 			<string>Timestamp</string>
 			<key>type</key>
-			<string>Liste</string>
+			<string>list</string>
 			<key>options</key>
 			<array>
-				<string>Sichtbar</string>
-				<string>Unsichtbar</string>
+				<string>Visible</string>
+				<string>Hidden</string>
 			</array>
 		</dict>
 		<dict>
@@ -100,14 +100,14 @@
 			<key>default</key>
 			<integer>0</integer>
 			<key>description</key>
-			<string>Zeilenabstand</string>
+			<string>Line spacing</string>
 			<key>type</key>
-			<string>Liste</string>
+			<string>list</string>
 			<key>options</key>
 			<array>
 				<string>Normal</string>
-				<string>Kleine Lücke</string>
-				<string>Große Lücke</string>
+				<string>Small Gap</string>
+				<string>Large Gap</string>
 			</array>
 		</dict>
 	</array>
