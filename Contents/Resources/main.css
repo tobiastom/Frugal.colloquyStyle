@@ -197,4 +197,10 @@ li {
 
 .encoding { display: none; opacity: 0.25; font-size: 0.75em; color:  black; }         
 
+
 .duplicateTimestamp { opacity: 0; }
+/*
+.duplicateNick span { opacity: 0; }
+.duplicateNick:after {	content: "›"; }
+.duplicateNick:before { content: " "; }
+*/

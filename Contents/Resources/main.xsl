@@ -89,7 +89,7 @@
             	    <a id="{@id}" title="{$senderHostmask}" href="{$memberLink}" class="{$senderClasses} {$senderColor} hidden"><xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text></a>
                 </xsl:when>
                 <xsl:otherwise>
-            	    <a id="{@id}" title="{$senderHostmask}" href="{$memberLink}" class="{$senderClasses} {$senderColor}"><xsl:value-of select="sender | ../sender" /></a>
+            	    <a id="{@id}" title="{$senderHostmask}" href="{$memberLink}" class="{$senderClasses} {$senderColor}"><span><xsl:value-of select="sender | ../sender" /></span></a>
             	    <span class="hidden">: </span>
                 </xsl:otherwise>
             </xsl:choose>
