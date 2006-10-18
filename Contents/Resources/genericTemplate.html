@@ -39,6 +39,7 @@ function scrollToBottom( checkAlignBotton ) {
 
     var elements = getElementsByClassName( 'message'  );
 	elements[ elements.length - 1 ].scrollIntoView( true );
+	debug( elements[ elements.length - 1 ].innerHTML, true );
 }
 function markSameNicks() {
     var elements = getElementsByClassName( 'member'  );
@@ -71,9 +72,9 @@ function debug( message, clearBox ) {
 	debugElement.style.display = 'block';
 	
 	if ( clearBox ) {
-		debugElement.innerHTML = '<br />' + message;
+		debugElement.innerText = '<br />' + message;
 	} else {
-		debugElement.innerHTML += '<br />' + message;
+		debugElement.innerText += '<br />' + message;
 	}
 	debugElement.scrollIntoView( true );
 }
