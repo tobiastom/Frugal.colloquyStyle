@@ -80,6 +80,10 @@ li {
 	color: inherit !important;
 }
 
+.message a:visited {
+	color: #c2c2c2 !important !important;
+} 
+
 .event {
 	display: block;
 	text-align: left;
