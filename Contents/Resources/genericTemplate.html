@@ -2,6 +2,9 @@
   <head>
 
 <script type="text/javascript">
+
+var alignBottom = true;
+
 function getElementsByClassName( className, tagName, rootNode ) {
     rootNode = rootNode || document;
     tagName = tagName || '*';
@@ -24,36 +27,66 @@ function markSameTimestamps() {
     var elements = getElementsByClassName( 'timestamp-value'  );
     var parentTimestamp = elements[ elements.length - 2 ];
     var currentTimestamp = elements[ elements.length - 1 ];
-    elements[ elements.length - 1 ].scrollIntoView( true );
 
     if ( parentTimestamp.innerHTML == currentTimestamp.innerHTML ) {
         currentTimestamp.className += ' duplicateTimestamp';
     }
 }
 
+function scrollToBottom( checkAlignBotton ) {
+	if ( typeof( checkAlignBotton ) == 'undefined' ) checkAlignBotton = true;
+	if ( checkAlignBotton && !alignBottom ) { return false; }
+
+    var elements = getElementsByClassName( 'message'  );
+	elements[ elements.length - 1 ].scrollIntoView( true );
+}
 function markSameNicks() {
     var elements = getElementsByClassName( 'member'  );
-    var parentTimestamp = elements[ elements.length - 2 ];
-    var currentTimestamp = elements[ elements.length - 1 ];	
+    var parentNick = elements[ elements.length - 2 ];
+    var currentNick = elements[ elements.length - 1 ];	
 
-    if ( parentTimestamp.innerHTML == currentTimestamp.innerHTML ) {
-        currentTimestamp.className += ' duplicateNick';
+    if ( parentNick.innerHTML == currentNick.innerHTML ) {
+        currentNick.className += ' duplicateNick';
     }
 }
 
 function onNodeInsert() {
 	markSameTimestamps();
 	markSameNicks();
+	scrollToBottom();
 }
 
 window.onload = function() {
-	document.getElementById('contents').addEventListener( 'DOMNodeInserted', onNodeInsert );
+	document.getElementById('contents').addEventListener( 'DOMNodeInserted', onNodeInsert, false );
+}
+window.onscroll = function() {
+	var windowHeight = window.innerHeight;
+	var scrollOffset = window.pageYOffset;
+	var contentHeight = document.getElementById('contents').offsetHeight;
+	alignBottom = ( ( windowHeight + scrollOffset - 5 ) >= contentHeight );
+	debug( alignBottom, true );
 }
 
+function debug( message, clearBox ) {
+	var debugElement = document.getElementById('debug');
+	debugElement.style.display = 'block';
+	
+	if ( clearBox ) {
+		debugElement.innerHTML = '<br />' + message;
+	} else {
+		debugElement.innerHTML += '<br />' + message;
+	}
+	debugElement.scrollIntoView( true );
+}
 		</script>
+		
+		<style type="text/css">
+			#debug { min-width: 100px; max-height: 10em; display: none; overflow: auto; position: fixed; top: 0px; right: 0px; background: #fff; z-index: 99; }
+		</style>
 	</head>
   
 	<body>
+			<div id="debug"></div>
     		<div id="contents"></div>
   	</body>
 </html>
