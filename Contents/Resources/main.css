@@ -199,8 +199,5 @@ li {
 
 
 .duplicateTimestamp { opacity: 0; }
-/*
-.duplicateNick span { opacity: 0; }
-.duplicateNick:after {	content: "›"; }
-.duplicateNick:before { content: " "; }
-*/
+
+.duplicateNick { opacity: 0.25; }
