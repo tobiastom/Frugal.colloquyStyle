@@ -4,6 +4,7 @@ body {
 	background: white;
 	font-size: 12px;
 	font-family: "Lucida Grande", Helvetica, sans-serif;
+	line-height: 15px;
 }
 
 dt {
@@ -13,18 +14,12 @@ dt {
 	color: #7F7F7F;
 	font-size: 0.8em;
 	width: 80px;
-	padding-top: 2px;
-}
-
-dt.message:before {
-	content: "<";
+	padding: 3px 0px 0px 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-
-dt.message:after {
-	content: ">";
-	white-space: nowrap;
-}
+dt a { text-decoration: none; }
 
 dd {
     margin-left: 90px;
