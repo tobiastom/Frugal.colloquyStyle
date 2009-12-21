@@ -26,7 +26,13 @@ dd {
     margin-right: 3em;
     padding-top: 3px;
 }
-
+dd a {
+    color: #000;
+    text-decoration: none;
+}
+dd a:hover {
+    text-decoration: underline;
+}
 .time {
 	margin-right: 1em;
 	font-size: 0.8em;
