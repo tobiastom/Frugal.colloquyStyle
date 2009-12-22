@@ -132,3 +132,8 @@ dd.event, dd.event a {
 .duplicateTimestamp { opacity: 0; }
 
 .duplicateNick { opacity: 0.25; }
+
+dd.highlight { font-weight: bold; }
+dd.action { color: #aaa; font-style: italic; }
+.notice { color: #aaa; }
+.ignore { display: none; }

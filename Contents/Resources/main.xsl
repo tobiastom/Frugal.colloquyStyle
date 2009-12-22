@@ -18,6 +18,21 @@
 
     <xsl:template match="envelope | message">
 
+		<xsl:variable name="envelopeClasses"> 
+		    <xsl:if test="message[1]/@highlight = 'yes' or @highlight = 'yes'"> 
+		        <xsl:text> highlight</xsl:text> 
+		    </xsl:if> 
+		    <xsl:if test="message[1]/@action = 'yes' or @action = 'yes'"> 
+		        <xsl:text> action</xsl:text> 
+		    </xsl:if> 
+		    <xsl:if test="message[1]/@type = 'notice' or @type = 'notice'"> 
+		        <xsl:text> notice</xsl:text> 
+		    </xsl:if> 
+		    <xsl:if test="message[1]/@ignored = 'yes' or @ignored = 'yes' or ../@ignored = 'yes'"> 
+		        <xsl:text> ignore</xsl:text> 
+		    </xsl:if> 
+		</xsl:variable>
+
         <xsl:variable name="senderClasses">
             <xsl:if test="sender/@self = 'yes' or ../sender/@self = 'yes'">
                 <xsl:text>self</xsl:text>
@@ -76,7 +91,7 @@
 			<span class="hidden">]</span></span>
 			<span class="hidden">:</span>
 		</dt>
-		<dd class="message">
+		<dd class="message {$envelopeClasses}">
 			<xsl:choose>
 				<xsl:when test="message[1]">
 					<xsl:apply-templates select="message[1]/child::node()" mode="copy" />
