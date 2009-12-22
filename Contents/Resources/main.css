@@ -27,7 +27,7 @@ dd {
     padding-top: 3px;
 }
 dd a {
-    color: #000;
+    color: blue;
     text-decoration: none;
 }
 dd a:hover {
