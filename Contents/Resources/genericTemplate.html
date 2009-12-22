@@ -1,74 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript">
-
-		var alignBottom = true;
-
-		function getElementsByClassName( className, tagName, rootNode ) {
-		    rootNode = rootNode || document;
-		    tagName = tagName || '*';
-
-		    var result = [];
-		    var elements = rootNode.getElementsByTagName( tagName );
-		    for( var x = 0; x < elements.length; x++ ) {
-		        if ( !elements[x].className ) { continue; }
-		        var classes = elements[x].className.split( ' ' );
-		        for ( var y = 0; y < classes.length; y++ ) {
-		            if ( classes[y] != className ) { continue; }
-		            result.push( elements[x] );
-					break;
-		        }
-		    }
-		    return result;
-		}
-
-		function markSameTimestamps() {
-		    var elements = getElementsByClassName( 'time'  );
-		    var parentTimestamp = elements[ elements.length - 2 ];
-		    var currentTimestamp = elements[ elements.length - 1 ];
-
-		    if ( parentTimestamp.innerHTML == currentTimestamp.innerHTML ) {
-		        currentTimestamp.className += ' duplicateTimestamp';
-		    }
-		}
-
-		function scrollToBottom( checkAlignBotton ) {
-			if ( typeof( checkAlignBotton ) == 'undefined' ) checkAlignBotton = true;
-			if ( checkAlignBotton && !alignBottom ) { return false; }
-
-		    var elements = getElementsByClassName( 'message'  );
-			elements[ elements.length - 1 ].scrollIntoView( true );
-		}
-
-		function markSameNicks() {
-			var elements = document.getElementById("contents").getElementsByClassName("nick");
-		    var parentNick = elements[ elements.length - 2 ];
-		    var currentNick = elements[ elements.length - 1 ];
-		
-		    if ( parentNick.innerHTML == currentNick.innerHTML ) {
-		        currentNick.className += ' duplicateNick';
-		    }
-		}
-
-		function onNodeInsert() {
-			markSameTimestamps();
-			markSameNicks();
-			scrollToBottom();
-		}
-
-		window.onload = function() {
-			document.getElementById('contents').addEventListener( 'DOMNodeInserted', onNodeInsert, false );
-		}
-
-		window.onscroll = function() {
-			var windowHeight = window.innerHeight;
-			var scrollOffset = window.pageYOffset;
-			var contentHeight = document.getElementById('contents').offsetHeight;
-			alignBottom = ( ( windowHeight + scrollOffset - 5 ) >= contentHeight );
-		}
-
-	</script>
+	<script type="text/javascript" src="main.js"></script>
 </head>
   
 <body>
