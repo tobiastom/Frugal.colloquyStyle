@@ -41,12 +41,12 @@ dd a:hover {
 	right: 0;
 }
 
-dd.event {
+dd.event, dd.action {
     font-size: 0.8em;
     padding-top: 6px;
 }
 
-dd.event, dd.event a {
+dd.event, dd.event a, dd.action, dd.action a {
     color: #aaa;
 }
 
@@ -134,6 +134,6 @@ dd.event, dd.event a {
 .duplicateNick { opacity: 0.25; }
 
 dd.highlight { font-weight: bold; }
-dd.action { color: #aaa; font-style: italic; }
+dt.action a { display: none; }
 .notice { color: #aaa; }
 .ignore { display: none; }

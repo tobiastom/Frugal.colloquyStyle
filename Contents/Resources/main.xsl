@@ -20,16 +20,16 @@
 
 		<xsl:variable name="envelopeClasses"> 
 		    <xsl:if test="message[1]/@highlight = 'yes' or @highlight = 'yes'"> 
-		        <xsl:text> highlight</xsl:text> 
+		        <xsl:text>highlight</xsl:text> 
 		    </xsl:if> 
 		    <xsl:if test="message[1]/@action = 'yes' or @action = 'yes'"> 
-		        <xsl:text> action</xsl:text> 
+		        <xsl:text>action</xsl:text> 
 		    </xsl:if> 
 		    <xsl:if test="message[1]/@type = 'notice' or @type = 'notice'"> 
-		        <xsl:text> notice</xsl:text> 
+		        <xsl:text>notice</xsl:text> 
 		    </xsl:if> 
 		    <xsl:if test="message[1]/@ignored = 'yes' or @ignored = 'yes' or ../@ignored = 'yes'"> 
-		        <xsl:text> ignore</xsl:text> 
+		        <xsl:text>ignore</xsl:text> 
 		    </xsl:if> 
 		</xsl:variable>
 
@@ -82,7 +82,7 @@
         </xsl:choose>
      </xsl:variable>
 
-        <dt class="nick message {$senderColor}">
+        <dt class="nick message {$senderColor} {$envelopeClasses}">
 			<a title="{$senderHostmask}" href="{$memberLink}"><xsl:value-of select="sender | ../sender" /></a>
 			<span class="time"> <span class="hidden">[</span>
 			    <xsl:call-template name="short-time">
@@ -92,6 +92,10 @@
 			<span class="hidden">:</span>
 		</dt>
 		<dd class="message {$envelopeClasses}">
+			<xsl:if test="$envelopeClasses = 'action'">
+				<a title="{$senderHostmask}" href="{$memberLink}"><xsl:value-of select="sender | ../sender" /></a>
+				<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
+			</xsl:if>
 			<xsl:choose>
 				<xsl:when test="message[1]">
 					<xsl:apply-templates select="message[1]/child::node()" mode="copy" />
