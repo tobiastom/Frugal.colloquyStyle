@@ -59,6 +59,6 @@ window.onload = function() {
 window.onscroll = function() {
 	var windowHeight = window.innerHeight;
 	var scrollOffset = window.pageYOffset;
-	var contentHeight = document.getElementById('contents').offsetHeight;
+	var contentHeight = document.getElementsByTagName('body')[0].offsetHeight;
 	alignBottom = ( ( windowHeight + scrollOffset - 5 ) >= contentHeight );
 }
