@@ -37,11 +37,11 @@ function scrollToBottom( checkAlignBotton ) {
 }
 
 function markSameNicks() {
-	var elements = document.getElementById("contents").getElementsByClassName("nick");
+	var elements = getElementsByClassName("nick", "dt");
     var parentNick = elements[ elements.length - 2 ];
     var currentNick = elements[ elements.length - 1 ];
 
-    if ( parentNick.innerHTML == currentNick.innerHTML ) {
+    if ( parentNick.firstChild.innerHTML == currentNick.firstChild.innerHTML ) {
         currentNick.className += ' duplicateNick';
     }
 }

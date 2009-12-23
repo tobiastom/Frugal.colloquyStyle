@@ -134,10 +134,9 @@ dd.event, dd.event a, dd.action, dd.action a {
 
 .duplicateTimestamp { opacity: 0; }
 
-.duplicateNick { opacity: 0.25; }
+.duplicateNick a { opacity: 0.25; }
 
-dt.highlight a { opacity: 1; }
-dt.highlight a:before { content: '★ '; font-weight: bold; float: left; }
+dt.highlight a:before { content: '★ '; font-weight: bold; float: left; opacity: 1; }
 
 dt.action a { display: none; }
 .notice { color: #aaa; }
