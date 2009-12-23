@@ -30,6 +30,9 @@ dd a {
     color: blue;
     text-decoration: none;
 }
+dd a.member {
+    color: black;
+}
 dd a:hover {
     text-decoration: underline;
 }
