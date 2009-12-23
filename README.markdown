@@ -6,7 +6,7 @@ The intention was to create a style for this great IRC-client which is simple, f
 
 ![Screenshot](http://cloud.github.com/downloads/tobiastom/Frugal.colloquyStyle/FrugalColloquyStyle.png)
 
-Current version: 1.0
+Current version: [Frugal 1.0](http://cloud.github.com/downloads/tobiastom/Frugal.colloquyStyle/Frugal_1.0.zip)
 
 ## Features
 
