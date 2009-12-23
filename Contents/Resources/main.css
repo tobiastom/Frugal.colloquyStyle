@@ -136,6 +136,7 @@ dd.event, dd.event a, dd.action, dd.action a {
 
 .duplicateNick { opacity: 0.25; }
 
+dt.highlight a { opacity: 1; }
 dt.highlight a:before { content: '★ '; font-weight: bold; float: left; }
 
 dt.action a { display: none; }
