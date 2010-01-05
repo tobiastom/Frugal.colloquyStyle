@@ -1,25 +1,7 @@
 var alignBottom = true;
 
-function getElementsByClassName( className, tagName, rootNode ) {
-    rootNode = rootNode || document;
-    tagName = tagName || '*';
-
-    var result = [];
-    var elements = rootNode.getElementsByTagName( tagName );
-    for( var x = 0; x < elements.length; x++ ) {
-        if ( !elements[x].className ) { continue; }
-        var classes = elements[x].className.split( ' ' );
-        for ( var y = 0; y < classes.length; y++ ) {
-            if ( classes[y] != className ) { continue; }
-            result.push( elements[x] );
-			break;
-        }
-    }
-    return result;
-}
-
 function markSameTimestamps() {
-    var elements = getElementsByClassName( 'time'  );
+    var elements = document.getElementsByClassName( 'time'  );
     var parentTimestamp = elements[ elements.length - 2 ];
     var currentTimestamp = elements[ elements.length - 1 ];
 
@@ -32,12 +14,16 @@ function scrollToBottom( checkAlignBotton ) {
 	if ( typeof( checkAlignBotton ) == 'undefined' ) checkAlignBotton = true;
 	if ( checkAlignBotton && !alignBottom ) { return false; }
 
-    var elements = getElementsByClassName( 'message'  );
+    var elements = document.getElementsByClassName( 'message'  );
 	elements[ elements.length - 1 ].scrollIntoView( true );
 }
 
 function markSameNicks() {
-	var elements = getElementsByClassName("nick", "dt");
+    var dts = document.getElementsByTagName("dt");
+    var elements = [];
+    for(var i=0; i<=dts.length; i++) {
+    	elements.push(dts[i].getElementsByClassName("nick"));
+    }
     var parentNick = elements[ elements.length - 2 ];
     var currentNick = elements[ elements.length - 1 ];
 
