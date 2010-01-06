@@ -19,7 +19,7 @@ function scrollToBottom( checkAlignBotton ) {
 }
 
 function markSameNicks() {
-	var elements = document.querySelectorAll("dt.nick");
+    var elements = document.querySelectorAll("dt.nick");
     var parentNick = elements[ elements.length - 2 ];
     var currentNick = elements[ elements.length - 1 ];
 
