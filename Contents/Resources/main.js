@@ -19,7 +19,7 @@ function getElementsByClassName( className, tagName, rootNode ) {
 }
 
 function markSameTimestamps() {
-    var elements = getElementsByClassName( 'time'  );
+    var elements = document.getElementsByClassName( 'time'  );
     var parentTimestamp = elements[ elements.length - 2 ];
     var currentTimestamp = elements[ elements.length - 1 ];
 
@@ -32,12 +32,12 @@ function scrollToBottom( checkAlignBotton ) {
 	if ( typeof( checkAlignBotton ) == 'undefined' ) checkAlignBotton = true;
 	if ( checkAlignBotton && !alignBottom ) { return false; }
 
-    var elements = getElementsByClassName( 'message'  );
+    var elements = document.getElementsByClassName( 'message'  );
 	elements[ elements.length - 1 ].scrollIntoView( true );
 }
 
 function markSameNicks() {
-	var elements = getElementsByClassName("nick", "dt");
+	var elements = document.querySelectorAll("dt.nick");
     var parentNick = elements[ elements.length - 2 ];
     var currentNick = elements[ elements.length - 1 ];
 
