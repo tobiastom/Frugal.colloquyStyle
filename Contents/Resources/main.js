@@ -31,6 +31,8 @@ function markSameNicks() {
 function makeInlineImages() {
     var elements = document.querySelectorAll("dd.message a");
     var element, file_ext, img;
+
+    var magnifier = "data:image/gif;base64,R0lGODlhCQAJAKIAADExMUpKStbW1u/v7/f394yMjGNjY////yH5BAAAAAAALAAAAAAJAAkAAAMheFdW+kYMYV6RY7pjBvlDtRwfMSoAFDwcYAQNCxWbHAQJADs=";
     
     for(var i=0; i<elements.length; i++) {
         element = elements[i];
@@ -39,10 +41,17 @@ function makeInlineImages() {
             if(file_ext == ".jpg" || file_ext == "jpeg" || file_ext == ".png" || file_ext == ".gif") {
                 element.has_image = true;
                 img = document.createElement("img");
-                img.src = elements[i].href;
+                img.url = elements[i].href;
+                img.src = magnifier;
                 img.className = "min-version";
                 img.onclick = function () {
-                    img.className = (img.className == "min-version") ? "origin-version" : "min-version"
+                    if(img.className == "origin-version") {
+                        img.className = "min-version";
+                        img.src = magnifier;
+                    } else {
+                        img.className = "origin-version";
+                        img.src = img.url;
+                    }
                 }
                 if(element.nextSibling == null) element.parentNode.appendChild(img);
                 else element.parentNode.insertBefore(img, element.nextSibling);
