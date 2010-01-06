@@ -1,23 +1,5 @@
 var alignBottom = true;
 
-function getElementsByClassName( className, tagName, rootNode ) {
-    rootNode = rootNode || document;
-    tagName = tagName || '*';
-
-    var result = [];
-    var elements = rootNode.getElementsByTagName( tagName );
-    for( var x = 0; x < elements.length; x++ ) {
-        if ( !elements[x].className ) { continue; }
-        var classes = elements[x].className.split( ' ' );
-        for ( var y = 0; y < classes.length; y++ ) {
-            if ( classes[y] != className ) { continue; }
-            result.push( elements[x] );
-			break;
-        }
-    }
-    return result;
-}
-
 function markSameTimestamps() {
     var elements = document.getElementsByClassName( 'time'  );
     var parentTimestamp = elements[ elements.length - 2 ];
