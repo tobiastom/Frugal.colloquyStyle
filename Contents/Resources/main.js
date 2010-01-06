@@ -28,9 +28,34 @@ function markSameNicks() {
     }
 }
 
+function makeInlineImages() {
+    var elements = document.querySelectorAll("dd.message a");
+    var element, file_ext, img;
+    
+    for(var i=0; i<elements.length; i++) {
+        element = elements[i];
+        if(!element.has_image) {
+            file_ext = element.href.substr(element.href.length - 4 , 4);
+            if(file_ext == ".jpg" || file_ext == "jpeg" || file_ext == ".png" || file_ext == ".gif") {
+                element.has_image = true;
+                img = document.createElement("img");
+                img.src = elements[i].href;
+                img.className = "min-version";
+                img.onclick = function () {
+                    img.className = (img.className == "min-version") ? "origin-version" : "min-version"
+                }
+                if(element.nextSibling == null) element.parentNode.appendChild(img);
+                else element.parentNode.insertBefore(img, element.nextSibling);
+                img.parentNode.insertBefore(document.createTextNode(" "), img);
+            }            
+        }
+    }
+}
+
 function onNodeInsert() {
 	markSameTimestamps();
 	markSameNicks();
+	makeInlineImages();
 	scrollToBottom();
 }
 

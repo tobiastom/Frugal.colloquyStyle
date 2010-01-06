@@ -39,11 +39,12 @@ dd a:hover {
     text-decoration: underline;
 }
 .time {
-	margin-right: 1em;
+	padding-right: 1em;
 	font-size: 0.8em;
 	color: #aaa;
 	position: absolute;
 	right: 0;
+	background: white;
 }
 
 dd.event, dd.action {
@@ -54,6 +55,9 @@ dd.event, dd.action {
 dd.event, dd.event a, dd.action, dd.action a {
     color: #aaa;
 }
+
+.message a + img.min-version { height: 15px; vertical-align: middle; max-width: 100%; }
+.message a + img.origin-version { display: block; max-width: 100%; }
 
 .colorself, .colorself a {
     color: #A90101;
