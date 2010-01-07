@@ -56,8 +56,8 @@ dd.event, dd.event a, dd.action, dd.action a {
     color: #aaa;
 }
 
-.message a + img.min-version { vertical-align: middle; }
-.message a + img.origin-version { display: block; max-width: 100%; }
+.message a + img.min-version { vertical-align: middle; cursor: pointer; }
+.message a + img.origin-version { display: block; max-width: 100%; cursor: pointer; }
 
 .colorself, .colorself a {
     color: #A90101;
