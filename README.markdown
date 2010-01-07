@@ -14,6 +14,7 @@ Current version: [Frugal 1.0](http://cloud.github.com/downloads/tobiastom/Frugal
 - unique timestamps
 - nickname shows on hover users hostmask
 - clean and unobtrusive design
+- inline images (click on the magnifying glass after the link)
 - different variations
   - Normal
   - LayoutOnly
