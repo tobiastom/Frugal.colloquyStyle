@@ -4,7 +4,7 @@ This is the projectpage for Frugal, a style for the  Mac OS X IRC-client  [Collo
 
 The intention was to create a style for this great IRC-client which is simple, functional but good looking. All other styles couldn't attract us.
 
-![Screenshot](http://cloud.github.com/downloads/tobiastom/Frugal.colloquyStyle/FrugalColloquyStyle.png)
+![Screenshot](http://cloud.github.com/downloads/tobiastom/Frugal.colloquyStyle/FrugalColloquyStyle_1.1.png)
 
 Current version: [Frugal 1.1](http://cloud.github.com/downloads/tobiastom/Frugal.colloquyStyle/Frugal_1.1.zip)
 
