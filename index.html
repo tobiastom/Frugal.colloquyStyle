@@ -4,63 +4,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
 	<title>tobiastom/Frugal.colloquyStyle @ GitHub</title>
-	
 	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #2582e8;
-		  font-family: "Helvetica,Arial,FreeSans"; 
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #da7d17; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #da7d17; }
-    h3 { text-align: center; color: #da7d17; }
-    a { color: #da7d17; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
+		body { margin: 1.0em 1em 2em 1em; background-color: white; color: black; font-family: "Lucida Grande", Helvetica, Arial, sans-serif; font-size: 100.1%; }
+    	#container { margin: 0 auto; max-width: 40em; font-size: 0.8em; }
+		#fork { position: absolute; top: 0; right: 0; border: 0; }
+		h1 { font-size: 3.8em; }
+		h1 span { font-size: 0.3em; display: block; }
+		h1 a { text-decoration: none; color: black; }
+		h2 { font-size: 1.5em; margin-top: 2em; }
+		h3 { margin-top: 2em; }
+		a { color: blue; }
+		a img { border: none; }
+		code, pre { font-size: 1.2em; }
+    	.description { font-size: 1.2em; margin: 30px 0; font-style: italic;}
+    	.download { float: right; }
+		.download img { width: 90px; }
 		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
 	</style>
 	
 </head>
 
 <body>
-  <a href="http://github.com/tobiastom/Frugal.colloquyStyle"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
   
   <div id="container">
+	
+	<div id="fork">
+		<a href="http://github.com/tobiastom/Frugal.colloquyStyle">
+			<img src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+		</a>
+	</div>
 
     <div class="download">
       <a href="http://github.com/tobiastom/Frugal.colloquyStyle/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+        <img src="http://github.com/images/modules/download/zip.png"></a>
       <a href="http://github.com/tobiastom/Frugal.colloquyStyle/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+        <img src="http://github.com/images/modules/download/tar.png"></a>
     </div>
       
-    <h1><a href="http://github.com/tobiastom/Frugal.colloquyStyle">Frugal.colloquyStyle</a> 
-      <span class="small">by <a href="http://github.com/tobiastom">tobiastom</a></span></h1>
+    <h1><a href="http://github.com/tobiastom/Frugal.colloquyStyle">Frugal <span>(a Colloquy Style)</span></a></h1>
 
     <div class="description">
-      This is the projectpage for Frugal, a style for the  Mac OS X IRC-client Colloquy. This project is maintained by Jeena and Tobias.
-
-The intention was to create a style for this great IRC-client which is simple, functional but good looking. All other styles couldn't attract us.
+		<p>This is the projectpage for Frugal, a style for the  Mac OS X IRC-client Colloquy. This project is maintained by Jeena and Tobias.</p>
+		<p>The intention was to create a style for this great IRC-client which is simple, functional but good looking. All other styles couldn't attract us.</p>
     </div>
 
-    <p>Features include</p>
+    <h2>Features include:</h2>
 
     <ul>
         <li>colored nicks (same color even if you change your nick, uses the hostmask to identify)</li>
         <li>unique timestamps</li>
         <li>nickname shows on hover users hostmask</li>
         <li>clean and unobtrusive design</li>
+		<li>inline images (click on the magnifying glass after the link)</li>
         <li>different variations
             <ul>
                 <li>Normal</li>
@@ -76,24 +72,21 @@ The intention was to create a style for this great IRC-client which is simple, f
         Colloquy – <a href="http://colloquy.info/">colloquy.info</a></p>
 
     <h2>Install</h2>
-    <p>Installation
+    <p>Download and unzipp the package. Then move it to <code>~/Library/Application Support/Colloquy/Styles/</code></p>
 
-Download and unzipp the package. Then move it to ~/Library/Application Support/Colloquy/Styles/
+	<h3>How to use it:</h3>
+	<p>If you don't like to restart Colloquy to load the style, you can write <code>/reload styles</code> (enter)
+		and then <code>/reload</code> style so it should be accessible under Styles. You can use different versions
+		depending on your needs. The names are self describing.</p>
 
-How to use it
-
-If you don't like to restart Colloquy to load the style, you can write /reload styles (enter) and then /reload style so it should be accessible under Styles. You can use different versions depending on your needs. The names are self describing.</p>
-<h2>License</h2>
-<p>BSD</p>
-<h2>Authors</h2>
-<p>Jeena Paradies (spam@jeenaparadies.net)
-<br/>Tobias Tom (t.tom@succont.de)
-<br/>
-<br/>      </p>
-<h2>Contact</h2>
-<p>Tobias Tom (t.tom@succont.de)
-<br/>      </p>
-
+	<h2>License</h2>
+	<p><a href="http://www.opensource.org/licenses/bsd-license.php">BSD</a></p>
+	
+	<h2>Authors</h2>
+	<ul>
+		<li>Jeena Paradies (<a href="mailto:spam@jeenaparadies.net">spam@jeenaparadies.net</a>)</li>
+		<li>Tobias Tom (<a href="mailto:t.tom@succont.de">t.tom@succont.de</a>)</li>
+	</ul>
 
     <h2>Download</h2>
     <p>
@@ -105,13 +98,7 @@ If you don't like to restart Colloquy to load the style, you can write /reload s
       by running:
       <pre>$ git clone git://github.com/tobiastom/Frugal.colloquyStyle</pre>
     </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/tobiastom/Frugal.colloquyStyle">tobiastom/Frugal.colloquyStyle</a>
-    </div>
-    
-  </div>
 
-  
+  </div>
 </body>
 </html>
