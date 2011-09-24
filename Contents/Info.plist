@@ -7,7 +7,7 @@
 	<key>CFBundleGetInfoString</key>
 	<string>Frugal Colloquy Chat Style</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.jeenaparadies.projects.frugal</string>
+	<string>com.github.tobiastom.frugalColloquyStyle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>0.1.0</string>
 	<key>CFBundleName</key>
@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>coSt</string>
 	<key>JVStyleDescription</key>
-	<string>see http://jeenaparadies.net/projects/frugal</string>
+	<string>see http://tobiastom.github.com/Frugal.colloquyStyle/</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Jeena Paradies and clynx</string>
 	<key>JVStyleOptions</key>
